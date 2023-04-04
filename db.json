@@ -1,0 +1,22 @@
+{
+  "account": [
+    {
+      "id": 1,
+      "name": "myha",
+      "email": "myha@gmail.com",
+      "address": "cantho1"
+    },
+    {
+      "name": "suu phen",
+      "email": "a@gmail.com",
+      "address": "cantho",
+      "id": 2
+    },
+    {
+      "name": "phuoc",
+      "email": "p@gmail.com",
+      "address": "adasdas",
+      "id": 7
+    }
+  ]
+}

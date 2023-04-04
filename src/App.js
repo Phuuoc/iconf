@@ -1,26 +1,23 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import path from './resource/path';
-import HomeScreen from "./page/Home/HomeScreen";
-import './App.css';
-import HomeScreens from './page/Home/HomeScreen';
-import { Register } from './resource/path';
-import RegisterScreens from './page/Register/RegisterScreen';
-import LoginScreens from './page/Login/screen/LoginScreen';
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AccountList from "./AccountList";
+import AccCreate from "./AccountCreate";
+import AccUpdate from "./AccountUpdate";
 
-export default function App() {
-    
-    return (
-        <BrowserRouter>
-        <Switch>
-
-        <Route path={path.HOME} render={() => <HomeScreens/>} />
-        <Route path={path.Register} render={() => <RegisterScreens/>} />
-        <Route path={path.Login} render={() => <LoginScreens/>} />
-
-        </Switch>
-        </BrowserRouter>
-    )
+function App() {
+  return (
+    <div className="App">
+      <h1>Demo CRUD</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AccountList />}></Route>
+          <Route path="/account/create" element={<AccCreate />}></Route>
+          <Route path="/account/update/:accid" element={<AccUpdate />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
-
-
+export default App;
